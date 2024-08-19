@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Senseless Sage UI components demo.">
+
+    <title>Sage UI demo</title>
+
+    <link rel="icon" type="image/png" href="/src/ui/assets/icons/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/src/ui/assets/css/main.css">
+</head>
+
+<body>
+    <x-flex class="v">
+        <header>
+            <x-flex class="h">
+                <nav>
+                    <x-flex class="h">
+                        <x-side-panel class="slide-in-from-left overlay round">
+                            <input type="checkbox" class="btn icon fa fa-times m-l-m m-t-xs">
+
+                            <x-card class="round">
+                                <x-flex class="v">
+                                    <button class="btn outlined round-t no-border-b">stacked btn</button>
+                                    <button class="btn outlined angular">stacked btn</button>
+                                    <button class="btn outlined round-b no-border-t">stacked btn</button>
+                                </x-flex>
+                            </x-card>
+                        </x-side-panel>
+                        <input type="checkbox" class="btn icon fa fa-bars m-s">
+
+                        <button id="toggle-content-side-panel" class="fa fa-caret-square-left m-s"></button>
+                    </x-flex>
+                </nav>
+                <p class="grow center txt-center">Header</p>
+            </x-flex>
+        </header>
+
+        <x-flex class="h">
+            <x-side-panel id="content-side-panel" class="slide-in-from-left show grow round m-xs no-m-r">
+                <x-accordion>
+                    <input type="checkbox" class="accordion" style="--label: 'Section 1'">
+                    <x-accordion-content class="p-m">Section 1 content</x-accordion-content>
+
+                    <input type="checkbox" class="accordion" style="--label: 'Section 2'">
+                    <x-accordion-content class="p-m">Section 2 content</x-accordion-content>
+
+                    <input type="checkbox" class="accordion" style="--label: 'Section 3'">
+                    <x-accordion-content class="p-m">Section 3 content</x-accordion-content>
+                </x-accordion>
+            </x-side-panel>
+
+            <main class="grow-4 round m-xs">
+                <x-flex class="v">
+                    <x-tabs>
+                        <input type="radio" name="tab" class="tab grow" style="--label: 'Tab 1'" checked>
+                        <x-tab>
+                            <x-steps>
+                                <input type="radio" name="stepper" class="stepper icon fa fa-box"
+                                    style="--title: 'Order Info'" checked>
+                                <x-step>
+                                    <x-card class="elevated round p-s c-sc-xl">
+                                        <x-flex class="h wrap space-around-content">
+                                            <button class="filled">filled btn</button>
+                                            <button class="tonal">tonal btn</button>
+                                            <button class="elevated">elevated btn</button>
+                                            <button class="outlined">outlined btn</button>
+                                            <button id="loading-btn" class="icon fa fa-eye dark"></button>
+                                            <button id="toast-btn">toast btn</button>
+                                            <input type="checkbox" class="btn elevated" style="--label: 'toggle btn'">
+                                        </x-flex>
+                                    </x-card>
+
+                                    <x-card class="elevated round p-s c-sc-l">
+                                        <x-flex class="h space-around-content">
+                                            <x-popup>
+                                                <input type="checkbox" class="btn outlined" style="--label: 'popup'">
+                                                <x-popup-content class="bottom shadow">
+                                                    <ul class="v hoverable">
+                                                        <li>Eve</li>
+                                                        <li class="no-p">
+                                                            <x-popup class="hoverable center-content p-tb-xxs">
+                                                                <input type="checkbox" class="btn"
+                                                                    style="--label: 'Adam'">
+                                                                <x-popup-content class="right shadow-r">
+                                                                    <ul class="h hoverable center-items">
+                                                                        <li>Eve2</li>
+                                                                        <li>Adam2</li>
+                                                                        <li>Jill2</li>
+                                                                    </ul>
+                                                                </x-popup-content>
+                                                            </x-popup>
+                                                        </li>
+                                                        <li>Jill</li>
+                                                    </ul>
+                                                </x-popup-content>
+                                            </x-popup>
+
+                                            <x-popup class="center-content center-self">
+                                                <input type="checkbox" class="toggle-switch">
+                                                <x-popup-content class="top">top</x-popup-content>
+                                                <x-popup-content class="bottom">bottom</x-popup-content>
+                                                <x-popup-content class="left">left</x-popup-content>
+                                                <x-popup-content class="right">right</x-popup-content>
+                                            </x-popup>
+                                        </x-flex>
+                                    </x-card>
+
+                                    <x-card class="elevated round p-s c-sc">
+                                        <x-flex class="h wrap space-around-content">
+                                            <input type="text" class="shadow-on-hover">
+
+                                            <select class="select" name="option">
+                                                <option value="" disabled selected>Choose your option</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                            </select>
+                                        </x-flex>
+                                    </x-card>
+
+                                    <x-card class="elevated round c-sc-h">
+                                        <x-flex class="v">
+                                            <x-card class="scrollable">
+                                                <table class="col-lines striped hoverable">
+                                                    <tr>
+                                                        <th>First Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>Points</th>
+                                                        <th>Points</th>
+                                                        <th>Points</th>
+                                                        <th>Points</th>
+                                                        <th>Points</th>
+                                                        <th>Points</th>
+                                                        <th>Points</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jill</td>
+                                                        <td>Smith</td>
+                                                        <td>50</td>
+                                                        <td>50</td>
+                                                        <td>50</td>
+                                                        <td>50</td>
+                                                        <td>50</td>
+                                                        <td>50</td>
+                                                        <td>50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Eve</td>
+                                                        <td>Jackson</td>
+                                                        <td>94</td>
+                                                        <td>94</td>
+                                                        <td>94</td>
+                                                        <td>94</td>
+                                                        <td>94</td>
+                                                        <td>94</td>
+                                                        <td>94</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Adam</td>
+                                                        <td>Johnson</td>
+                                                        <td>67</td>
+                                                        <td>67</td>
+                                                        <td>67</td>
+                                                        <td>67</td>
+                                                        <td>67</td>
+                                                        <td>67</td>
+                                                        <td>67</td>
+                                                    </tr>
+                                                </table>
+                                            </x-card>
+
+                                            <x-card class="fit-content center-self">
+                                                <ul class="h inline hoverable font-xl">
+                                                    <li>Jill</li>
+                                                    <li>Eve</li>
+                                                    <li>Adam</li>
+                                                    <li>Joe</li>
+                                                </ul>
+                                            </x-card>
+
+                                            <x-card class="scrollable vh-25">
+                                                <x-flex class="h grow">
+                                                    <ul class="v hoverable">
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                    </ul>
+                                                    <ul class="v hoverable">
+                                                        <li>Jill2</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                        <li>Jill</li>
+                                                        <li>Eve</li>
+                                                        <li>Adam</li>
+                                                        <li>Joe</li>
+                                                    </ul>
+                                                </x-flex>
+                                            </x-card>
+                                        </x-flex>
+                                    </x-card>
+
+                                    <x-card class="outlined round c-sc-xh">
+                                        <x-flex class="v center-items">
+                                            <x-flex class="h">
+                                                <label for="option-1" class="m-r-xxs">Option 1</label>
+                                                <input type="checkbox" id="option-1" name="scales" checked />
+                                            </x-flex>
+                                            <x-flex class="h">
+                                                <input type="checkbox" id="option-2" name="scales" />
+                                                <label for="option-2" class="m-l-xxs">Option 2</label>
+                                            </x-flex>
+                                            <x-flex class="h">
+                                                <input type="checkbox" id="option-3" name="scales" />
+                                                <label for="option-3" class="m-l-xxs">Option 3</label>
+                                            </x-flex>
+                                        </x-flex>
+                                    </x-card>
+                                </x-step>
+
+                                <x-step-divider></x-step-divider>
+
+                                <input type="radio" name="stepper" class="stepper"
+                                    style="--label: '2'; --title: 'Personal Info'">
+                                <x-step class="scrollable">
+                                    <p class="txt-center">Step 2 content.</p>
+                                </x-step>
+
+                                <x-step-divider></x-step-divider>
+
+                                <input type="radio" name="stepper" class="stepper"
+                                    style="--label: '3'; --title: 'Confirmation'">
+                                <x-step>
+                                    <p class="txt-center">Step 3 content.</p>
+                                </x-step>
+                            </x-steps>
+                        </x-tab>
+
+                        <input type="radio" name="tab" class="tab grow" style="--label: 'Tab 2'">
+                        <x-tab>
+                            <p class="txt-center">Tab 2</p>
+                        </x-tab>
+
+                        <input type="radio" name="tab" class="tab grow" style="--label: 'Tab 3'">
+                        <x-tab>
+                            <p class="txt-center">Tab 3</p>
+                        </x-tab>
+                    </x-tabs>
+
+                    <x-divider class="m-t-s"></x-divider>
+
+                    <footer>
+                        <p class="txt-center">Footer</p>
+                    </footer>
+                </x-flex>
+            </main>
+        </x-flex>
+    </x-flex>
+
+    <script type="module">
+        import { loadController } from "/node_modules/sage-ui/js/page/controller-loader.js";
+        loadController();
+    </script>
+</body>
+
+</html>

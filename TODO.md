@@ -1,0 +1,3 @@
+- eg edit input on the left side, which is mapped to user and reactively updates userDto on the right side
+- demonstrate the css importing for custom component styling
+- demonstrate passing a complex service, which is holding state (e.g translationService), from one view to another using the mapper
