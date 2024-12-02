@@ -1,3 +1,6 @@
+- why do i have added a manifest link in this commit
+- rm class="select" from slecet input and name proptery
+- update sage-ui version and fix label var
 - eg edit input on the left side, which is mapped to user and reactively updates userDto on the right side
 - demonstrate the css importing for custom component styling
 - demonstrate passing a complex service, which is holding state (e.g translationService), from one view to another using the mapper
